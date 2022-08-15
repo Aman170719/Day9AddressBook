@@ -26,47 +26,52 @@ public class Address {
         this.lastName = lastName;
     }
 
-    public String getCity(String c) {
+    public void getCity(String city) {
+       this.city = city;
+    }
+
+    public String setCity(String city) {
+        this.city = city;
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
+    public void getState(String state) {
         this.state = state;
     }
 
-    public String getEmail(String s) {
+    public String setState(String state) {
+        this.state = state;
+        return state;
+    }
+
+    public String getEmail(String email) {
         return email;
     }
 
-    public void setEmail(String email) {
+    public String setEmail(String email) {
         this.email = email;
+        return email;
     }
 
-    public String getZip(String z) {
+    public String getZip(String zip) {
         return zip;
     }
 
-    public void setZip(String zip) {
+    public String setZip(String zip) {
         this.zip = zip;
+        return zip;
     }
-    public String getPhoneNumber(String PN) {
+
+    public String getPhoneNumber(String phoneNumber) {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public String setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+        return phoneNumber;
     }
-
     public String toString() {
-        return "AddressBook [ First Name = " + firstName + "\n" + "Last Name = " + lastName + "\n"+ "City Name or Location = " +city+
-                "\n" +  "State Name = " +state+ "\n" + "Zip Code = "+ zip + "\n" +"Email = " +email+"\n" + "Phone Number = " +phoneNumber+ "]";
+        return "[First Name = " + firstName + "\n" + "Last Name = " + lastName + "\n" + "City Name or Location = " + city +
+                "\n" + "State Name = " + state + "\n" + "Zip Code = " + zip + "\n" + "Email = " + email + "\n" + "Phone Number = " + phoneNumber + "]";
     }
 }
