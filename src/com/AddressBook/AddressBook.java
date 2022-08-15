@@ -14,7 +14,7 @@ public class AddressBook {
         while (true) {
             System.out.println("Choose option which you want to Perform");
             System.out.println("Press 1 for Creating New Address \nPress 2 to View All the Address"
-            + "\nPress 3 to Edit the Existing address");
+                    + "\nPress 3 to Edit the Existing address" + "\nPress 4 to Delete address");
             int option = Integer.parseInt(scan.nextLine());
             switch (option) {
                 case 1:
@@ -55,9 +55,9 @@ public class AddressBook {
                 case 3:
                     System.out.println("Editing Records");
                     System.out.println("Enter the First Name which you want to Edit");
-                    for(int i=0;i<list.size();i++){
-                        address1=list.get(i);
-                        if(scan.nextLine().equals(address1.getFirstName())){
+                    for (int i = 0; i < list.size(); i++) {
+                        address1 = list.get(i);
+                        if (scan.nextLine().equals(address1.getFirstName())) {
                             System.out.println("Press 1 to Change first Name");
                             System.out.println("Press 2 to Change Name");
                             System.out.println("Press 3 to Change City ");
@@ -93,12 +93,26 @@ public class AddressBook {
                                     //
                                     list.add(address1);
                             }
-                        }
-                        else{
+                        } else {
                             System.out.println("Details Not Found");
-                            }
+                        }
                     }
-                    default:
+                case 4: {
+                    System.out.println("Deleting The Address");
+                    System.out.println("Enter the Name which you want to delete");
+                    for (int i = 0; i < list.size(); i++) {
+                        address1 = list.get(i);
+                        if (scan.nextLine().equals(address1.getFirstName())) {
+                            list.remove(address1);
+                            System.out.println("List has been deleted" + list);
+                        } else {
+                            System.out.println("Details Not found");
+                        }
+                    }
+                }
+                break;
+
+                default:
                     System.out.println("Enter correct option");
             }
             System.out.println("Details are " + list);
